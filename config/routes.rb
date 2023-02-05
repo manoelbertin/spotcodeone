@@ -8,7 +8,10 @@ Rails.application.routes.draw do
       resources :dashboard, only: :index
       resources :categories, only: [:index, :show]
       resources :search, only: :index
-      resources :albums, only: :show
+      resources :albums, only: :show do 
+        resources :recently_heards, only: :create
+      end
     end
   end
 end
+# /api/v1/albums/:id/recently_heards   <<-- a rota alinhada.
