@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :albums, only: :show do 
         resources :recently_heards, only: :create
       end
+      resources :favorites, only: :index
     end
   end
 end
