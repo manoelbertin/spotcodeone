@@ -26,7 +26,8 @@ Rails.application.routes.draw do
 
       resources :songs, only: [] do 
         concerns :favoritable, favoritable_type: 'Song'
+      end
     end
   end
 end
-# /api/v1/albums/:id/recently_heards   <<-- a rota alinhada.
+# /api/v1/albums/:id/recently_heards   <<-- a rota alinhada
