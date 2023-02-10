@@ -19,10 +19,11 @@ Rails.application.routes.draw do
       resources :dashboard, only: :index
       resources :categories, only: [:index, :show]
       resources :search, only: :index
+      resources :favorites, only: :index
       resources :albums, only: :show do 
         resources :recently_heards, only: :create
       end
-      resources :favorites, only: :index
+
 
       resources :songs, only: [] do 
         concerns :favoritable, favoritable_type: 'Song'
